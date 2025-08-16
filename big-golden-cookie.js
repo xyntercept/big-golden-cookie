@@ -17,3 +17,4 @@ Game.ClickCookie=function(e,amount)
 				Game.goldenClicks++;
         Game.goldenClicksLocal++;
 			}
+		}
