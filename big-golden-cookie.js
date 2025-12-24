@@ -1,7 +1,3 @@
-Game.Loader.Replace('perfectCookie.png','https://i.imgur.com/yjGBb7y.png');
-AddEvent(l('bigCookie'),'click',function(){ClickCookieGold();});
-RemoveEvent([l('bigCookie'),'click',Game.ClickCookie])
-
 function ClickCookieGold(e,amount)
 		{
 			var now=Date.now();
@@ -22,3 +18,10 @@ function ClickCookieGold(e,amount)
         Game.goldenClicksLocal++;
 			}
 		}
+
+Game.registerMod("bigGoldenCookie", {
+	init:function(){
+Game.Loader.Replace('perfectCookie.png','https://i.imgur.com/yjGBb7y.png');
+AddEvent(l('bigCookie'),'click',function(){ClickCookieGold();});
+RemoveEvent([l('bigCookie'),'click',Game.ClickCookie])
+	}})
